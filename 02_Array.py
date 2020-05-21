@@ -83,5 +83,5 @@ class Array:
             self.__shrink()
 
     def display(self):
-        print(f"Cap: {self.__capacity} Size: {self.__size} Array: {self.__arr}")
+        print(f"Cap: {self.__capacity} Size: {self.__size} Values: {self.__arr}")
 
