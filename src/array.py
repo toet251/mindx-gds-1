@@ -32,7 +32,7 @@ class Array:
     def is_empty(self):
         return self.__size == 0
 
-    def __is_full(self):
+    def is_full(self):
         return self.__size == self.__capacity
 
     def item_at(self, index):
@@ -41,7 +41,7 @@ class Array:
         return self.__arr[index]
 
     def append(self, value):
-        if self.__is_full():
+        if self.is_full():
             self.__expand()
         self.__arr[self.__size] = value
         self.__size += 1
@@ -49,7 +49,7 @@ class Array:
     def insert(self, value, index):
         if index < 0 or index > self.__size:
             raise Exception("Invalid index to insert")
-        if self.__is_full():
+        if self.is_full():
             self.__expand()
         i = self.__size
         while i > index:
@@ -84,4 +84,3 @@ class Array:
 
     def display(self):
         print(f"Cap: {self.__capacity} Size: {self.__size} Values: {self.__arr}")
-
